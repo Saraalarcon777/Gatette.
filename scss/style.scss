@@ -1,0 +1,271 @@
+
+$color-fondo: #fce3b0;
+$color-navbar: #fde2b3;
+$color-texto: #3a2e20;
+$color-hover: #000;
+$color-boton: #e99b00;
+$color-footer: #d26a47;
+$fuente-principal: "Poppins", sans-serif;
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  background-color: $color-fondo;
+  font-family: $fuente-principal;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: $color-navbar;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: $color-texto;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+.nav-link {
+  color: $color-texto;
+  font-weight: 500;
+  margin-right: 1rem;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+/* MENÚ */
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(250, 235, 215, 0.374);
+  flex-wrap: wrap;
+  padding: 10px;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $color-texto;
+  text-decoration: none;
+  padding-left: 30px;
+
+  img {
+    height: 80px;
+    padding: 10px;
+  }
+}
+
+/* FONDO */
+.imag {
+  width: 100%;
+  height: auto;
+}
+
+/* ENLACES */
+nav a {
+  padding: 10px;
+  margin-right: 20px;
+  color: $color-texto;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+/* GATETTEBI */
+.gatettebi-img {
+  width: 100%;
+  height: auto;
+}
+
+.gatettebi-text {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: $fuente-principal;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* DESTACADO */
+.fondo {
+  background-color: $color-fondo;
+}
+
+.titulo {
+  display: flex;
+  padding: 80px;
+  justify-content: center;
+  align-items: center;
+  color: #7d2e00;
+}
+
+.cafe-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  animation: fadeIn 1.3s ease-in;
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.cafe-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cafe-info {
+  max-width: 400px;
+
+  h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-buy {
+  background: $color-boton;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: darken($color-boton, 10%);
+  }
+}
+
+/* SECCIÓN GATOGAR */
+.main-content {
+  display: flex;
+  padding: 50px;
+  gap: 80px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.section-title {
+  width: 25%;
+  font-size: 1.8em;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: 75%;
+  max-width: 800px;
+  height: 600px;
+}
+
+.cat-card {
+  background-color: lighten($color-navbar, 10%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid $color-boton;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cat-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+.footer {
+  background: $color-footer;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in;
+
+  .footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .footer-logo img {
+    width: 40px;
+  }
+
+  .footer-redes a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+  }
+}

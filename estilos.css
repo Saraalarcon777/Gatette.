@@ -1,0 +1,431 @@
+body {
+  background-color: #fce3b0; 
+}
+
+.navbar {
+  background-color: #fde2b3;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: #3a2e20;
+}
+
+.navbar-brand:hover {
+  color: #000;
+}
+
+.nav-link {
+  color: #3a2e20;
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.navbar-logo {
+  height: 40px;
+  margin-right: 10px;
+}   
+
+
+.menu {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(250, 235, 215, 0.374);
+  flex-wrap: wrap;
+  padding: 10px;
+  
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #3a2b20;
+  text-decoration: none;
+  padding-left: 30px;
+}
+
+.logo img {
+  height: 80px;
+  padding: 10px;
+}
+
+.imag{
+  width: 100%;
+  height: auto;
+}
+
+nav a {
+  padding: 10px;
+  margin-right: 20px;
+  color: #3a2b20;            
+  text-decoration: none;    
+  font-weight: 500;        
+  transition: color 0.3s ease; 
+}
+
+
+/* Imagen de fondo */
+.gatettebi-img {
+  width: 100%;
+  height: auto;
+}
+
+.gatettebi-text {
+  position: absolute;
+  bottom: 50px; 
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.gatettebi-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.4); 
+}
+
+
+/* SECCIÓN DESTACADO */
+
+.fondo{
+  background-color: #fce3b0;
+}
+
+.titulo{
+  display: flex;
+  padding: 80px;
+  justify-content: center;
+  align-items: center;
+  color: #7d2e00;
+  
+}
+.cafe-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  }
+
+.cafe-section:nth-child(even) {
+  flex-direction: row-reverse; 
+}
+
+.cafe-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.cafe-info {
+  max-width: 400px;
+}
+
+.cafe-info h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cookie-info p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.btn-buy {
+  background: #e99b00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .cookie-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+/* SECCIÓN GATOGAR */
+.main-content {
+    display: flex; 
+    padding: 50px;
+    gap: 80px;
+}
+
+.section-title {
+    width: 25%; 
+    font-size: 1.8em;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.cats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--gap);
+    width: 75%; 
+    max-width: 800px; 
+    height: 600px; 
+}
+
+.cat-card {
+    background-color: var(--gray-light);
+    padding: var(--gap);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid var(--orange-accent); 
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+.card-info h2 {
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: 5px; /
+}
+
+.card-info p {
+    font-size: 0.8em;
+    margin-bottom: 15px; 
+}
+
+.cat-image-container {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    background-color: var(--gray-medium); 
+}
+
+.cat-image-container img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+.nara {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.michi {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.chelsi {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+
+.pacho {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+/* FOOTER */
+.footer {
+  background: #d26a47;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 40px;
+}
+
+.footer-redes a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+/* VISÍTANOS */
+.visitanos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  background-image: url("./img/cute-cat.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.info {
+  flex: 1 1 300px;
+  padding: 20px;
+}
+
+.mapa {
+  flex: 1 1 300px;
+  height: 250px;
+  background: rgba(50,50,50,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  header {
+    height: 70vh;
+  }
+
+  .matcha h3 {
+    font-size: 24px;
+  }
+
+  .gatogar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .footer-contenido {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .destacado {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  .matcha h3,
+  .gatogar h3 {
+    font-size: 20px;
+  }
+
+  .visitanos {
+    padding: 50px 10px;
+  }
+}
+
+/* QUE SOMOS */
+.container .text-center {
+  padding-top: 50px;
+}
+
+.hero-section .carousel-item img {
+  transition: transform 0.5s ease, filter 0.5s ease;
+  width: 100%;
+  height: 100vh; 
+  object-fit: cover;
+}
+
+.hero-section .carousel-item.active img {
+  filter: brightness(50%);
+}
+
+.product-card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.product-card img {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  height: 220px;
+  object-fit: cover;
+}
+
+
+.price {
+  font-weight: 700;
+  color: #3a2e20;
+}
+
+.btn-order {
+  background-color: #ffffff;
+  color: #ff2f00;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.btn-order:hover {
+  background-color: #5a4533;
+}
+
+/* FOOTER */
+.footer {
+  background: #d26a47;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 40px;
+}
+
+.footer-redes a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
