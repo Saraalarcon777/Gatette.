@@ -1,8 +1,8 @@
 
-$color-fondo: #fce3b0;
-$color-navbar: #fde2b3;
+$color-fondo: #fff3db;
+$color-navbar: #fff3db;
 $color-texto: #3a2e20;
-$color-hover: #000;
+$color-hover: #3a2e20;
 $color-boton: #e99b00;
 $color-footer: #d26a47;
 $fuente-principal: "Poppins", sans-serif;
@@ -27,20 +27,25 @@ body {
 /* NAVBAR */
 .navbar {
   background-color: $color-navbar;
+  height: 12vh; 
+
+  a{
+    font-size: large;
+    color: $color-texto;
+    font-weight: bold;
+  }
+  
 }
 
-.navbar-brand {
-  font-weight: 600;
-  color: $color-texto;
-
-  &:hover {
-    color: $color-hover;
-  }
+.collapse{
+  background-color: $color-fondo;
+  width: 100%;
+  padding: 20px;
 }
 
 .nav-link {
   color: $color-texto;
-  font-weight: 500;
+  font-size: 100px;
   margin-right: 1rem;
 
   &:hover {
@@ -49,7 +54,12 @@ body {
 }
 
 .navbar-logo {
-  height: 40px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.navbar-gato {
+  height: 50px;
   margin-right: 10px;
 }
 
@@ -76,53 +86,41 @@ body {
   padding-left: 30px;
 
   img {
-    height: 80px;
+    height: 100px;
     padding: 10px;
   }
 }
-
-/* FONDO */
-.imag {
-  width: 100%;
-  height: auto;
-}
-
-/* ENLACES */
-nav a {
-  padding: 10px;
-  margin-right: 20px;
-  color: $color-texto;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: $color-hover;
-  }
-}
-
 /* GATETTEBI */
-.gatettebi-img {
-  width: 100%;
-  height: auto;
-}
-
-.gatettebi-text {
-  position: absolute;
-  bottom: 50px;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-family: $fuente-principal;
-
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+.gatettebi{
+  height: 88vh;
+  padding: 120px 0;
+  background:  linear-gradient(rgba(255, 192, 45, 0.662)),
+  url('/img/adorable-gatito-blanco-y-negro-con-pared-monocromatica-detras-de-ella.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  h1{
+    
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    color: $color-texto;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    
+
   }
+
+  p{
+    text-align: center;
+    justify-content: center;
+    padding: 40px 200px 200px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: large;
+  }
+
 }
+
 
 /* DESTACADO */
 .fondo {
@@ -133,15 +131,18 @@ nav a {
   display: flex;
   padding: 80px;
   justify-content: center;
+  font-weight: bold;
   align-items: center;
-  color: #7d2e00;
+  color: #3a2e20;
+  font-size: 3rem;
+  
 }
 
 .cafe-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 300px;
   margin-bottom: 60px;
   padding: 0 20px;
   flex-wrap: wrap;
@@ -156,16 +157,19 @@ nav a {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  padding-right: 20px;
 }
 
 .cafe-info {
   max-width: 400px;
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 10px;
+    color: #7d2e00;
+  
   }
 
   p {
@@ -189,46 +193,249 @@ nav a {
 }
 
 /* SECCIÓN GATOGAR */
-.main-content {
-  display: flex;
-  padding: 50px;
-  gap: 80px;
-  animation: fadeIn 1.5s ease-in;
+.gatogar {
+  position: relative;
+  background: #ff8b2d;
+  overflow: hidden;
+
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .gatogar-img {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    background: #ffd900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .gatogar-title {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .gatogar-text {
+    color: #ffffff;
+    line-height: 1.6;
+  }
+
+  .gatogar-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+  }
+
+.cats-section {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
 
-.section-title {
-  width: 25%;
-  font-size: 1.8em;
-  line-height: 1.2;
+.cats-title h2 {
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
 .cats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  width: 75%;
-  max-width: 800px;
-  height: 600px;
+  grid-template-areas:
+    "nara michi chelsi"
+    "pacho pacho chelsi";
+  gap: 1.2rem;
 }
 
 .cat-card {
-  background-color: lighten($color-navbar, 10%);
-  padding: 20px;
+  background: #ffb171;
+  padding: 1rem;
+  position: relative;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 2px solid $color-boton;
-  border-radius: 8px;
-  overflow: hidden;
+
+  h3 {
+    margin-bottom: .3rem;
+  }
+
+  .info {
+    font-size: .7rem;
+    margin-bottom: .5rem;
+  }
+
+  .img-placeholder {
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 90%; 
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+
+  &.small {
+    height: 240px;
+
+    .img-placeholder {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  &.tall {
+    height: 350px;
+
+    .img-placeholder {
+      width: 160px;
+      height: 200px;
+    }
+  }
+
+  &.wide {
+    height: 160px;
+
+    .img-placeholder {
+      width: 200px;
+      height: 120px;
+    }
+  }
+
+
+  &:nth-child(1) { grid-area: nara; }
+  &:nth-child(2) { grid-area: michi; }
+  &:nth-child(3) { grid-area: chelsi; }
+  &:nth-child(4) { grid-area: pacho; }
 }
 
-.cat-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* VISITANOS */
+
+.visitanos {
+  min-height: 100vh;
+  background: url('../img/gato-domestico-marron-precioso-en-el-jardin-verde-concepto-animal-lindo-del-fondo.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 60px 0;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.8); 
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .titulo {
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  .p{
+    color: #fff;
+  }
+
+  .btn-visitanos {
+    background-color: #ff6200;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #3f2300;
+      transform: scale(1.05);
+    }
+  }
+
+  .card-imagen {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+  }
 }
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .visitanos-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    .btn-visit {
+      margin: 0 auto;
+    }
+  }
+
+  .visit-image,
+  .visit-map {
+    height: 220px;
+  }
+}
+
+
 
 /* FOOTER */
 .footer {
